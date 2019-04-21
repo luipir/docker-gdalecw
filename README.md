@@ -32,6 +32,27 @@ $ export DATAFOLDER="-v /folder_with_your_testdata/:/home/datafolder"
 $ docker run $DATAFOLDER --name gdalecw -it --rm ginetto/gdal:2.4.1 _ECW /bin/bash
 ```
 
+## How to abandon ECW to compressed GTiff
+
+if my ECW image is ```/path/to/my.ecw``` I can convert with:
+```
+docker run --rm -it --name gdalecw ginetto/gdal:2.4.1 _ECW
+            -v /path/to/:/home/datafolder
+            gdal_translate
+                if=/home/datafolder/my.ecw
+                of=/home/datafolder/my.tif
+```
+Use ```-u``` option in ```docker run``` command to avoid to have result with uid=0 (root). See https://docs.docker.com/engine/reference/run/
+
+### GTIFF compression parameters
+
+see guides in:
+http://blog.cleverelephant.ca/2015/02/geotiff-compression-for-dummies.html
+https://kokoalberti.com/articles/geotiff-compression-optimization-guide/
+
+apply optimization as ```-wo``` options to ```gdal_translate``` command
+
+
 ## Build the image on your own
 ```bash
 $ git clone https://github.com/luipir/docker-gdalecw.git
