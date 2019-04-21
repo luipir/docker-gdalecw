@@ -1,0 +1,27 @@
+##
+# ***************************************************************************
+#     begin                : April 2019
+#     author               : (C) 2019 by Luigi Pirelli
+#     author email         : luipir at gmail dot com
+#     copyright            : (C) 2019 INSITU
+#     company web          : https://ingenieriainsitu.com/en/
+# ***************************************************************************
+# *                                                                         *
+# *   This program is free software; you can redistribute it and/or modify  *
+# *   it under the terms of the GNU General Public License as published by  *
+# *   the Free Software Foundation; either version 2 of the License, or     *
+# *   (at your option) any later version.                                   *
+# *                                                                         *
+# ***************************************************************************
+##
+version: '3'
+services:
+  gdal:
+    build:
+      context: .
+      args:
+        GDAL_VERSION: ${GDAL_VERSION:-2.4.1}
+        ECW_INSTALLER: ${ECW_INSTALLER:-ERDASECWJP2SDKv54Update1forLinux}
+        ECW_UNZIPPED_INSTALLER: ${ECW_UNZIPPED_INSTALLER:-ERDAS_ECWJP2_SDK-5.4.0.bin}
+        ECW_INSTALLED_PATH: ${ECW_INSTALLED_PATH:-ERDAS-ECW_JPEG_2000_SDK-5.4.0}
+    image: ginetto/gdal:${TAG:-2.4.1_ECW}
