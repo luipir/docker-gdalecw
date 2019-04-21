@@ -15,6 +15,9 @@
 ***************************************************************************
 -->
 
+# Sponsored by
+This Docker image has been sponsored by INSITU Ingenieria: https://ingenieriainsitu.com/en/
+
 # Docker gdalecw
 
 gdal:2.4.1_ECW Docker images (with Python 3).
