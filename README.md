@@ -59,3 +59,9 @@ ERDASECWJP2SDKv54Update1forLinux
 ## Credits
 - https://github.com/OSGeo/gdal
 - https://registry.hub.docker.com/u/geodata/gdal/
+
+GDAL compilations steps are inspired by:
+- https://github.com/GeographicaGS/Docker-GDAL2
+
+ECW installation is inspired by:
+- https://gist.github.com/klokan/bfd4a07e8072ffae4bb6
