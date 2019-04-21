@@ -17,6 +17,11 @@
 # ginetto/gdal:2.4.1_ECW
 #
 # This creates a light Debian derived base image that installs GDAL 2 with ECW extension.
+#
+# References:
+# GDAL compilations steps are inspired by  https://github.com/GeographicaGS/Docker-GDAL2
+# ECW installation is inspired by: https://gist.github.com/klokan/bfd4a07e8072ffae4bb6
+#
 FROM debian:stable-slim
 MAINTAINER Luigi Pirelli <luipir@gmail.com>
 
