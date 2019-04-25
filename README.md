@@ -39,8 +39,8 @@ if my ECW image is ```/path/to/my.ecw``` I can convert with:
 docker run --rm -it --name gdalecw ginetto/gdal:2.4.1 _ECW
             -v /path/to/:/home/datafolder
             gdal_translate
-                if=/home/datafolder/my.ecw
-                of=/home/datafolder/my.tif
+                /home/datafolder/my.ecw
+                /home/datafolder/my.tif
 ```
 Use ```-u``` option in ```docker run``` command to avoid to have result with uid=0 (root). See https://docs.docker.com/engine/reference/run/
 
