@@ -36,8 +36,8 @@ $ docker run $DATAFOLDER --name gdalecw -it --rm ginetto/gdal:2.4.1 _ECW /bin/ba
 
 if my ECW image is ```/path/to/my.ecw``` I can convert with:
 ```
-docker run --rm -it --name gdalecw ginetto/gdal:2.4.1 _ECW
-            -v /path/to/:/home/datafolder
+docker run --rm -it --name gdalecw -v /path/to/:/home/datafolder
+            ginetto/gdal:2.4.1_ECW
             gdal_translate
                 /home/datafolder/my.ecw
                 /home/datafolder/my.tif
