@@ -64,7 +64,7 @@ This will create and run automatically ```ginetto/gdal:2.4.4_ECW``` image.
 ## Build other GDAL version
 To build with other gdal version see: ```docker-compose.yml``` build args.
 
-## Adapt buid to ECW installer
+## Adapt build to ECW installer
 Building process would download ECW redistributable installer, but the way to download it can change due to decision about this proprietary driver.
 During time, ECW installer can change the way to download. Adapt ```Dockerfile``` reflecting these changes.
 Actually the Build is based on downloading the following ECW installer:
