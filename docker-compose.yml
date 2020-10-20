@@ -20,8 +20,8 @@ services:
     build:
       context: .
       args:
-        GDAL_VERSION: ${GDAL_VERSION:-2.4.1}
+        GDAL_VERSION: ${GDAL_VERSION:-2.4.4}
         ECW_INSTALLER: ${ECW_INSTALLER:-ERDASECWJP2SDKv54Update1forLinux}
         ECW_UNZIPPED_INSTALLER: ${ECW_UNZIPPED_INSTALLER:-ERDAS_ECWJP2_SDK-5.4.0.bin}
         ECW_INSTALLED_PATH: ${ECW_INSTALLED_PATH:-ERDAS-ECW_JPEG_2000_SDK-5.4.0}
-    image: ginetto/gdal:${TAG:-2.4.1_ECW}
+    image: ginetto/gdal:${TAG:-2.4.4_ECW}
