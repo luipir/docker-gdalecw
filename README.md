@@ -29,7 +29,7 @@ docker run --rm -it ginetto/gdal:2.4.4_ECW
 Using a data volume
 ```bash
 $ export DATAFOLDER="-v /folder_with_your_testdata/:/home/datafolder"
-$ docker run $DATAFOLDER --name gdalecw -it --rm ginetto/gdal:2.4.4 _ECW /bin/bash
+$ docker run $DATAFOLDER --name gdalecw -it --rm ginetto/gdal:2.4.4_ECW /bin/bash
 ```
 
 ## How to abandon ECW to compressed GTiff
