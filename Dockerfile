@@ -14,7 +14,7 @@
 # *                                                                         *
 # ***************************************************************************
 ##
-# ginetto/gdal:2.4.1_ECW
+# ginetto/gdal:2.4.4_ECW
 #
 # This creates a light Debian derived base image that installs GDAL 2 with ECW extension.
 #
@@ -23,11 +23,11 @@
 # ECW installation is inspired by: https://gist.github.com/klokan/bfd4a07e8072ffae4bb6
 #
 FROM debian:stable-slim
-MAINTAINER Luigi Pirelli <luipir@gmail.com>
+LABEL maintainer="Luigi Pirelli <luipir@gmail.com>"
 
 # Load assets overrided in docker-compose.yml
 ENV ROOTDIR /usr/local/
-ARG GDAL_VERSION=2.4.1
+ARG GDAL_VERSION=2.4.4
 ARG ECW_INSTALLER=ERDASECWJP2SDKv54Update1forLinux
 ARG ECW_UNZIPPED_INSTALLER=ERDAS_ECWJP2_SDK-5.4.0.bin
 ARG ECW_INSTALLED_PATH=ERDAS-ECW_JPEG_2000_SDK-5.4.0

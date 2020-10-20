@@ -20,16 +20,16 @@ This Docker image has been sponsored by INSITU Ingenieria: https://ingenieriains
 
 # Docker gdalecw
 
-gdal:2.4.1_ECW Docker images (with Python 3).
+gdal:2.4.4_ECW Docker images (with Python 3).
 
 ```bash
-docker run --rm -it ginetto/gdal:2.4.1_ECW
+docker run --rm -it ginetto/gdal:2.4.4_ECW
 ```
 
 Using a data volume
 ```bash
 $ export DATAFOLDER="-v /folder_with_your_testdata/:/home/datafolder"
-$ docker run $DATAFOLDER --name gdalecw -it --rm ginetto/gdal:2.4.1 _ECW /bin/bash
+$ docker run $DATAFOLDER --name gdalecw -it --rm ginetto/gdal:2.4.4 _ECW /bin/bash
 ```
 
 ## How to abandon ECW to compressed GTiff
@@ -37,7 +37,7 @@ $ docker run $DATAFOLDER --name gdalecw -it --rm ginetto/gdal:2.4.1 _ECW /bin/ba
 if my ECW image is ```/path/to/my.ecw``` I can convert with:
 ```
 docker run --rm -it --name gdalecw -v /path/to/:/home/datafolder
-            ginetto/gdal:2.4.1_ECW
+            ginetto/gdal:2.4.4_ECW
             gdal_translate
                 /home/datafolder/my.ecw
                 /home/datafolder/my.tif
@@ -59,7 +59,7 @@ $ git clone https://github.com/luipir/docker-gdalecw.git
 $ cd docker-gdalecw
 $ docker-compose up
 ```
-This will create and run automatically ```ginetto/gdal:2.4.1_ECW``` image.
+This will create and run automatically ```ginetto/gdal:2.4.4_ECW``` image.
 
 ## Build other GDAL version
 To build with other gdal version see: ```docker-compose.yml``` build args.
@@ -73,7 +73,7 @@ ERDASECWJP2SDKv54Update1forLinux
 ```
 
 # Changelog
- - https://trac.osgeo.org/gdal/wiki/Release/2.4.1-News
+ - https://trac.osgeo.org/gdal/wiki/Release/2.4.4-News
 
 ## GDAL 2 info
 - http://download.osgeo.org/gdal/presentations/GDAL%202.1%20(FOSS4G%20Bonn%202016).pdf
